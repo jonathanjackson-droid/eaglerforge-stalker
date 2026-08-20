@@ -1,17 +1,17 @@
 ModAPI.require("player");
 
-var playerTested = false;
+var tested = false;
 
 ModAPI.addEventListener("update", function () {
-    if (playerTested) {
+    if (tested) {
         return;
     }
 
-    playerTested = true;
+    tested = true;
 
     if (ModAPI.player) {
-        ModAPI.displayToChat("§a[STALKER] Player access works!");
+        console.log("[STALKER] Player API detected!");
     } else {
-        ModAPI.displayToChat("§c[STALKER] Player access returned nothing.");
+        console.log("[STALKER] Player API unavailable.");
     }
 });
