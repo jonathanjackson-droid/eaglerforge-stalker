@@ -1,5 +1,7 @@
+ModAPI.require("player");
+
 ModAPI.addEventListener("update", function () {
-    ModAPI.displayToChat({
-        msg: "§a[STALKER] Loaded!"
-    });
+    if (ModAPI.player) {
+        ModAPI.displayToChat("§a[STALKER] Player API works!");
+    }
 });
